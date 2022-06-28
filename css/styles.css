@@ -2,7 +2,7 @@
 
 
 /* Общие */
-
+/* доделать переменные цветов и поменять в коде названия цветов */
 :root {
 	--fontWhite: #fff;
 	--fontOrange: #FF9900;
@@ -20,6 +20,12 @@ body {
 
 a {
 	color: inherit;
+}
+
+img {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 button {
@@ -228,6 +234,7 @@ button {
 .about-description {
 	display: flex;
 	flex-wrap: wrap;
+	align-items: flex-end;
 	column-gap: 1.6%;
 }
 
@@ -566,7 +573,6 @@ button {
 }
 
 .form__btn {
-	margin-right: 19px;
 	padding: 19px 52px;
 	color: var(--fontWhite);
 }
@@ -578,15 +584,66 @@ button {
 	line-height: 32px;
 }
 
-.form__check {							/*Свой чекбокс сделать */
-	width: 14px;
-	height: 14px;
+/*Свой чекбокс  */
+
+.form__checkbox-wrap {
+	display: inline-block;
+}
+
+.form__check {
+	appearance: none;
 }
 
 .form__check-descr {
+	position: relative;
+	padding-left: 33px;
 	font-size: 16px;
-	line-height: 32px;
 }
+
+.form__check-descr::before {
+	content: "";
+	position: absolute;
+	z-index: 1;
+	top: 3px;
+	left: 16px;
+	width: 14px;
+	height: 14px;
+	border: 1px solid #CACACA;
+	border-radius: 2px;
+	transition: box-shadow 0.2s linear;
+}
+
+.form__check-descr::after {
+	content: "";
+	position: absolute;
+	z-index: 2;
+	top: 3px;
+	left: 16px;
+	width: 14px;
+	height: 14px;
+	background-image: url('../img/check.svg');
+	background-repeat: no-repeat;
+	background-position: 50%;
+	opacity: 0;
+	transition: opacity .3s linear;
+}
+
+.form__check-descr:hover {
+	cursor: pointer;
+}
+
+.form__check-descr:hover::before {
+	box-shadow: 1px 1px 3px #97EE3F;
+}
+
+.form__check:checked + .form__check-descr::after {
+	opacity: 1;
+}
+
+
+
+
+
 
 /* Adaptive */
 
