@@ -96,7 +96,7 @@ button {
 .header {
 	display: flex;
 	align-items: center;
-	column-gap: 14.8%;
+	justify-content: space-between;
 	margin-bottom: 50px;
 	padding: 14px 4% 14px 3.8%;
 	border-radius: 0 0 var(--borderRadBig) var(--borderRadBig);
@@ -104,14 +104,23 @@ button {
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
 }
 
+.header__burger {
+	display: none;
+}
+
+.header__logo-link {
+	flex-shrink: 0;
+}
+
 .header__nav {
-	flex: 0 0 40%;
+	flex: 0 0 706px;
 	margin-left: auto;
+	margin-right: 260px;
 }
 
 .header__nav-list {
 	display: flex;
-	justify-content: space-between;
+
 }
 
 .header__nav-item {
@@ -119,6 +128,11 @@ button {
 	font-size: 18px;
 	line-height: 22px;
 }
+
+.header__nav-item:not(:last-of-type) {
+	margin-right: 85px;
+}
+
 
 .header__nav-link {
 	transition: color 0.3s ease, padding .5s ease, border-color .1s ease, outline-color .1s ease, outline-offset .5s ease;
@@ -241,12 +255,13 @@ button {
 .about-banner, .about-description-rigth {
 	flex: 0 0 49.15%;
 	min-width: 840px;
+	min-height: 622px;
 }
 
 /* Banner */
 
 .about-banner {
-	padding-top: 426px;
+	position: relative;
 	border-radius: var(--borderRadBig);
 	background-image: url('../img/about-compres.jpg');
 	background-size: cover;
@@ -256,8 +271,10 @@ button {
 .about-banner-item {
 	display: flex;
 	align-items: center;
+	position: absolute;
+	bottom: 0;
+	left: 0;
 	gap: 18.39%;
-	/* row-gap: 20px; */
 	min-width: 840px;
 	padding: 50px 6% 50px 5.46%;
 	border-radius: var(--borderRadBig);
@@ -590,16 +607,20 @@ button {
 	display: inline-block;
 }
 
+/* скрываем стандартный */
 .form__check {
 	appearance: none;
 }
 
+/* стилизация лейбла + паддинг слева для кастомного */
 .form__check-descr {
 	position: relative;
 	padding-left: 33px;
 	font-size: 16px;
+	transition: color .3s linear;
 }
 
+/* создание квадратика + его позиционирование*/
 .form__check-descr::before {
 	content: "";
 	position: absolute;
@@ -613,6 +634,7 @@ button {
 	transition: box-shadow 0.2s linear;
 }
 
+/* создание галочки + ее позичионирование + скрытие ее */
 .form__check-descr::after {
 	content: "";
 	position: absolute;
@@ -628,28 +650,33 @@ button {
 	transition: opacity .3s linear;
 }
 
+/* задание курсора при наведение на лейбл */
 .form__check-descr:hover {
 	cursor: pointer;
+	color: white;
 }
 
+/* анимация наведениея на чекбокс при помощи тени */
 .form__check-descr:hover::before {
 	box-shadow: 1px 1px 3px #97EE3F;
 }
 
+/* появление галочки при активации чека */
 .form__check:checked + .form__check-descr::after {
 	opacity: 1;
 }
 
-
-
-
-
-
 /* Adaptive */
 
 @media (max-width: 1769px) {
+
+	.header__nav-item:not(:last-of-type) {
+		margin-right: 70px;
+	}
+	
+
 	.main {
-		margin: 0 5px;
+		width: 95%;
 	}
 
 	.form__text {
@@ -658,20 +685,20 @@ button {
 
 }
 
-@media (max-width: 1717px) {
+@media (max-width: 1729px) {
 
-	.section-heading {
-		text-align: center;
+	.header__nav {
+		flex: none;
 	}
 
-	.header__nav-list {
-		column-gap: 10px;
+
+	.header__nav-item:not(:last-of-type) {
+		margin-right: 65px;
 	}
+	
 
 	.about-text {
 		width: 100%;
-		text-align: justify;
-		text-indent: 20px;
 	}
 
 	.about-description {
@@ -679,7 +706,7 @@ button {
 	}
 
 	.about-banner {
-		margin-bottom: 30px;
+		margin-bottom: 31px;
 	}
 
 
@@ -691,11 +718,6 @@ button {
 		align-items: stretch;
 	}
 
-	.how-work__article-description-text {
-		text-align: justify;
-		text-indent: 20px;
-	}
-
 	.how-work__article-banner {
 		height: auto;
 	}
@@ -704,4 +726,175 @@ button {
 		padding-left: 3.5%;
 		padding-right: 3.5%;
 	}
+}
+
+@media (max-width: 1500px) {
+	
+	.header__nav {
+		flex: none;
+		margin-left: 0;
+		margin-right: 0;
+	}
+
+	.header__nav-item:not(:last-of-type) {
+		margin-right: 50px;
+	}
+	
+}
+
+@media (max-width: 1024px) {
+
+
+	/* header */
+	.header {
+		justify-content: space-between;
+		margin-bottom: 40px;
+		padding: 26px 50px 26px 50px;
+	}
+
+	.header__burger {
+		display: block;
+	}
+
+	.header__logo {
+		width: 150px;
+		height: 48px;
+	}
+
+	.header__nav {
+		display: none;
+	}
+
+	/* Main */
+	.main {
+		max-width: 924px;
+		width: 100%;
+		margin: 0 auto;
+	}
+
+	/* Hero */
+	.hero {
+		margin-bottom: 36px;
+		padding: 160px 0 160px 75px;
+	}
+	
+	.hero-heading {
+		width: 770px;
+		margin-bottom: 16px;
+		font-size: 60px;
+		line-height: 73px;
+	}
+	
+	.hero-description {
+		width: 660px;
+		margin-bottom: 60px;
+		font-size: 20px;
+		line-height: 24px;
+	}
+	
+	.hero-btn {
+		padding: 25px 39px;
+		font-size: 23px;
+		line-height: 28px;
+	}
+	
+	/* About */
+
+	.about {
+		margin-bottom: 64px;
+	}
+
+	.about-text {
+		width: 100%;
+		margin-bottom: 59px;
+	}
+	
+	.about-banner, .about-description-rigth {
+		flex: 0 0 100%;
+		min-height: 640px;
+		min-width: auto;
+	}
+
+	.about-banner-item {
+		gap: 19.39%;
+		padding: 50px 5.3% 50px 5.46%;
+	}
+
+	.about-item {
+		padding: 65px 0 65px 8.2%;
+	}
+
+	/* How-work */
+
+	.how-work {
+		margin-bottom: 80px;
+	}
+
+	.how-work__heading {
+		margin-bottom: 49px;
+	}
+	
+	.how-work__nav-list {
+		column-gap: 86px;
+		justify-content: left;
+		margin-bottom: 51px;
+	}
+
+	.how-work__article {
+		align-items: flex-end;
+		flex: 0 0 437px;
+		column-gap: 50px;
+	}
+
+
+	.how-work__article-banner {
+		flex: 0 0 437px;
+		min-height: 689px;
+	}
+
+	.how-work__article-description-text:last-of-type {
+		margin-bottom: 25px;
+	}
+	
+	/* FAQ */
+
+	.faq {
+		margin-bottom: 82px;
+	}
+
+	.faq__list-item {
+		padding: 30px 0;
+	}
+
+	.faq__list-item-heading {
+		flex: 0 0 756px;
+		font-size: 20px;
+		line-height: 31.5px;
+	}
+
+	/* Footer */
+
+	.footer {
+		padding: 49px 50px 50px 49px;
+		column-gap: 132px;
+	}
+
+	.footer__left {
+		margin-right: 0;
+	}
+
+	.form {
+		flex: none;
+	}
+	
+
+
+	.form__btn {
+		padding: 19px 38px;
+
+	}
+
+
+	
+
 }
