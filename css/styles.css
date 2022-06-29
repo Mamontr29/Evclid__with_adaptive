@@ -211,7 +211,7 @@ button {
 }
 
 .hero-heading {
-	width: 837px;
+	width: 49.52%;
 	margin-bottom: 24px;
 	font-weight: 800;
 	font-size: 70px;
@@ -219,7 +219,7 @@ button {
 }
 
 .hero-description {
-	width: 790px;
+	width: 46.75%;
 	margin-bottom: 90px;
 	font-weight: 700;
 	font-size: 24px;
@@ -248,13 +248,12 @@ button {
 .about-description {
 	display: flex;
 	flex-wrap: wrap;
-	align-items: flex-end;
+	align-items: stretch;
 	column-gap: 1.6%;
 }
 
 .about-banner, .about-description-rigth {
 	flex: 0 0 49.15%;
-	min-width: 840px;
 	min-height: 622px;
 }
 
@@ -271,11 +270,10 @@ button {
 .about-banner-item {
 	display: flex;
 	align-items: center;
+	justify-content: space-between;
 	position: absolute;
 	bottom: 0;
 	left: 0;
-	gap: 18.39%;
-	min-width: 840px;
 	padding: 50px 6% 50px 5.46%;
 	border-radius: var(--borderRadBig);
 	color: var(--fontWhite);
@@ -283,7 +281,7 @@ button {
 }
 
 .about-banner-text {
-	min-width: 429px;
+	flex: 0 0 58.70%;
 	font-weight: 700;
 	font-size: 16px;
 	line-height: 32px;
@@ -701,14 +699,9 @@ button {
 		width: 100%;
 	}
 
-	.about-description {
-		justify-content: center;
+	.about-item {
+		padding-right: 20px;
 	}
-
-	.about-banner {
-		margin-bottom: 31px;
-	}
-
 
 	.how-work__nav-list {
 		justify-content: center;
@@ -768,7 +761,7 @@ button {
 	/* Main */
 	.main {
 		max-width: 924px;
-		width: 100%;
+		width: 90.23%;
 		margin: 0 auto;
 	}
 
@@ -779,14 +772,14 @@ button {
 	}
 	
 	.hero-heading {
-		width: 770px;
+		width: 90.69%;
 		margin-bottom: 16px;
 		font-size: 60px;
 		line-height: 73px;
 	}
 	
 	.hero-description {
-		width: 660px;
+		width: 77.74%;
 		margin-bottom: 60px;
 		font-size: 20px;
 		line-height: 24px;
@@ -816,7 +809,8 @@ button {
 	}
 
 	.about-banner-item {
-		gap: 19.39%;
+		justify-content: space-between;
+		column-gap: 0;
 		padding: 50px 5.3% 50px 5.46%;
 	}
 
@@ -842,13 +836,12 @@ button {
 
 	.how-work__article {
 		align-items: flex-end;
-		flex: 0 0 437px;
-		column-gap: 50px;
+		column-gap: 5.41%;
 	}
 
 
 	.how-work__article-banner {
-		flex: 0 0 437px;
+		flex: 0 0 47.29%;
 		min-height: 689px;
 	}
 
@@ -875,8 +868,10 @@ button {
 	/* Footer */
 
 	.footer {
+		justify-content: space-between;
+		column-gap: 0;
 		padding: 49px 50px 50px 49px;
-		column-gap: 132px;
+		
 	}
 
 	.footer__left {
@@ -893,8 +888,22 @@ button {
 		padding: 19px 38px;
 
 	}
+}
 
+@media (max-width: 992px) {
 
+	.main {
+		width: 87%;
+	}
+
+	.footer {
+		flex-direction: column-reverse;
+		align-items: flex-start;
+		row-gap: 50px;
+	}
+
+	.footer__nav {
+		display: none;
+	}
 	
-
 }
