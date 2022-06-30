@@ -908,6 +908,11 @@ button {
 		left: 13px;
 	}
 
+	.form__check-descr::after {
+		left: 13px;
+	}
+
+
 }
 
 @media (max-width: 992px) {
