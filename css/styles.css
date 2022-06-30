@@ -4,11 +4,15 @@
 /* Общие */
 /* доделать переменные цветов и поменять в коде названия цветов */
 :root {
-	--fontWhite: #fff;
-	--fontOrange: #FF9900;
-	--fontBlack: #000;
-	--fontColorFooter: #CACACA;
-	--ColorActive: #E1670E;
+	--color-white: #fff;
+	--color-orange: #FF9900;
+	--color-lightOrang: #FFB84D;
+	--color-darkOrange: #E1670E;
+	--color-Black: #000;
+	--color-lightLightGrey: #CACACA;
+	--color-opacityGrey: rgba(0, 0, 0, 0.5);
+	--color-Grey: #666666;
+	--color-dark-Grey: #414141;
 	--borderRad32: 32px;
 	--borderRad24: 24px;
 	--borderRad16: 16px;
@@ -40,23 +44,23 @@ button {
 	border-radius: var(--borderRad16);
 	font-size: 16px;
 	font-weight: 700;
-	background-color: var(--fontOrange);
+	background-color: var(--color-orange);
 	transition: background-color .3s ease;
 }
 
 .btn:hover {
-	background-color: #FFB84D;
-	border-color: #FFB84D;
+	background-color: var(--color-lightOrang);
+	border-color: var(--color-lightOrang);
 }
 
 .btn:focus {
-	background-color: #FFB84D;
-	border-color: #FFB84D;
+	background-color: var(--color-lightOrang);
+	border-color: var(--color-lightOrang);
 }
 
 .btn:active {
-	background-color: var(--ColorActive);
-	border-color: var(--ColorActive);
+	background-color: var(--color-darkOrange);
+	border-color: var(--color-darkOrange);
 }
 
 
@@ -79,17 +83,17 @@ button {
 }
 
 .nav-link:hover {
-	color: var(--fontOrange);
+	color: var(--color-orange);
 }
 
 .nav-link:focus {
-	outline: 2px solid var(--fontOrange);
+	outline: 2px solid var(--color-orange);
 	outline-offset: 3px;
 }
 
 .nav-link:active {
 	outline: none;
-	color: var(--ColorActive);
+	color: var(--color-darkOrange);
 }
 
 /* header */
@@ -101,7 +105,7 @@ button {
 	margin-bottom: 50px;
 	padding: 14px 4% 14px 3.8%;
 	border-radius: 0 0 var(--borderRad32) var(--borderRad32);
-	background: var(--fontWhite);
+	background: var(--color-white);
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
 }
 
@@ -141,18 +145,18 @@ button {
 
 .header__nav-link:hover {
 	padding-bottom: 7px;
-	border-bottom: 2px solid var(--fontOrange);
+	border-bottom: 2px solid var(--color-orange);
 }
 
 .header__nav-link:focus {
-	outline: 2px solid var(--fontOrange);
+	outline: 2px solid var(--color-orange);
 	outline-offset: 3px;
 }
 
 .header__nav-link:active {
 	padding-bottom: 7px;
 	outline: none;
-	color: var(--ColorActive);
+	color: var(--color-darkOrange);
 }
 
 .header__search-icon rect {
@@ -168,24 +172,24 @@ button {
 }
 
 .header__search:hover .header__search-icon rect {
-	fill: var(--fontOrange);
+	fill: var(--color-orange);
 }
 
 .header__search:hover .header__search-icon path {
-	stroke: var(--fontOrange);
+	stroke: var(--color-orange);
 }
 
 .header__search:focus {
-	outline: 2px solid var(--fontOrange);
+	outline: 2px solid var(--color-orange);
 	outline-offset: 2px;
 }
 
 .header__search:active .header__search-icon rect {
-	fill: var(--fontOrange);
+	fill: var(--color-orange);
 }
 
 .header__search:active .header__search-icon path {
-	stroke: var(--fontOrange);
+	stroke: var(--color-orange);
 }
 
 .header__search:focus {
@@ -205,7 +209,7 @@ button {
 	margin-bottom: 50px;
 	padding: 100px 0 100px 80px;
 	border-radius: var(--borderRad32);
-	color: var(--fontWhite);
+	color: var(--color-white);
 	background-image: url('../img/balconies-compres-2k-3k.jpg');
 	background-size: cover;
 	background-position: center center;
@@ -277,7 +281,7 @@ button {
 	left: 0;
 	padding: 50px 6% 50px 5.46%;
 	border-radius: var(--borderRad32);
-	color: var(--fontWhite);
+	color: var(--color-white);
 	background: rgba(0, 0, 0, 0.5);
 }
 
@@ -290,7 +294,7 @@ button {
 
 .about-banner-btn {
 	padding: 17px 36px;
-	border: 3px solid var(--fontOrange);
+	border: 3px solid var(--color-orange);
 	background-color: transparent;
 }
 
@@ -301,7 +305,7 @@ button {
 	column-gap: 6%;
 	align-items: center;
 	padding: 65px 0 65px 6.9%;
-	border: 1px solid grey;
+	border: 1px solid var(--color-lightLightGrey);
 	border-radius: var(--borderRad32);
 }
 
@@ -373,7 +377,7 @@ button {
 
 .how-work__article-btn-more {
 	margin-right: 27px;
-	color: var(--fontWhite);
+	color: var(--color-white);
 }
 
 .how-work__article-btn-contract {
@@ -384,21 +388,21 @@ button {
 }
 
 .how-work__article-btn-contract:hover {
-	color: var(--fontWhite);
-	background-color: #666666;
-	border-color: #666666;
+	color: var(--color-white);
+	background-color: var(--color-Grey);
+	border-color: var(--color-Grey);
 }
 
 .how-work__article-btn-contract:focus {
-	color: var(--fontWhite);
-	background-color: #666666;
-	border-color: #666666;
+	color: var(--color-white);
+	background-color: var(--color-Grey);
+	border-color: var(--color-Grey);
 }
 
 .how-work__article-btn-contract:active {
-	color: var(--fontWhite);
-	background-color: var(--fontBlack);
-	border-color: var(--fontBlack);
+	color: var(--color-white);
+	background-color: var(--color-Black);
+	border-color: var(--color-Black);
 }
 
 /* FAQ */
@@ -413,8 +417,8 @@ button {
 	justify-content: space-between;
 	margin-bottom: -1px;
 	padding: 30px 2px 30px 0;
-	border-bottom: 1px solid #CACACA;
-	border-top: 1px solid #CACACA;
+	border-bottom: 1px solid var(--color-lightLightGrey);
+	border-top: 1px solid var(--color-lightLightGrey);
 	transition: border-color .3s ease, color .3s ease;
 }
 
@@ -430,9 +434,9 @@ button {
 .faq__list-item:hover {
 	position: relative;
 	z-index: 1;
-	border-top-color: var(--fontOrange);
-	border-bottom-color: var(--fontOrange);
-	color: var(--fontOrange);
+	border-top-color: var(--color-orange);
+	border-bottom-color: var(--color-orange);
+	color: var(--color-orange);
 }
 
 
@@ -441,31 +445,31 @@ button {
 }
 
 .faq__list-item:hover .faq___list-item-icon ellipse {
-	fill: var(--fontOrange);
+	fill: var(--color-orange);
 }
 
 .faq__list-item:hover .faq___list-item-icon path {
-	fill: var(--fontWhite);
+	fill: var(--color-white);
 }
 
 .faq__list-item:focus {
 	position: relative;
 	z-index: 1;
-	border-color: var(--fontOrange);
-	color: var(--fontOrange);
+	border-color: var(--color-orange);
+	color: var(--color-orange);
 }
 
 .faq__list-item:focus .faq___list-item-icon ellipse {
-	fill: var(--fontOrange);
+	fill: var(--color-orange);
 }
 
 .faq__list-item:focus .faq___list-item-icon path {
-	fill: var(--fontWhite);
+	fill: var(--color-white);
 }
 
 .faq__list-item:active {
-	color: var(--fontBlack);
-	border-color: #CACACA;
+	color: var(--color-Black);
+	border-color: var(--color-lightLightGrey);
 }
 
 .faq__list-item:active .faq___list-item-icon path {
@@ -473,7 +477,7 @@ button {
 }
 
 .faq__list-item:active .faq___list-item-icon ellipse {
-	fill: var(--fontColorFooter);
+	fill: var(--color-lightLightGrey);
 }
 
 /* Footer */
@@ -482,8 +486,8 @@ button {
 	display: flex;
 	column-gap: 13.38%;
 	padding: 50px 75px;
-	color: var(--fontColorFooter);
-	background-color: var(--fontBlack);
+	color: var(--color-lightLightGrey);
+	background-color: var(--color-Black);
 }
 
 /* left */
@@ -523,16 +527,16 @@ button {
 }
 
 .footer__socials-odnoklass-link:hover path, .footer__socials-vkontakte-link:hover path {
-	fill: var(--fontOrange);
+	fill: var(--color-orange);
 }
 
 .footer__socials-odnoklass-link:focus .footer__socials-odnoklass-logo, .footer__socials-vkontakte-link:focus .footer__socials-vkontakte-logo {
-	outline: 2px solid var(--fontOrange);
+	outline: 2px solid var(--color-orange);
 	outline-offset: 3px;
 }
 
 .footer__socials-odnoklass-link:active path, .footer__socials-vkontakte-link:active path {
-	fill: var(--ColorActive);
+	fill: var(--color-darkOrange);
 }
 
 .footer__socials-odnoklass-link:active .footer__socials-odnoklass-logo, .footer__socials-vkontakte-link:active .footer__socials-vkontakte-logo {
@@ -558,15 +562,15 @@ button {
 	border-radius: var(--borderRad16);
 	font-size: 16px;
 	line-height: 32px;
-	color: var(--fontWhite);
-	background-color: #414141;
+	color: var(--color-white);
+	background-color: var(--color-dark-Grey);
 	transition: background-color .5s ease;
 }
 
 .form__input-name::placeholder, .form__input-email::placeholder, .form__textarea::placeholder {
 	font-size: 16px;
 	line-height: 32px;
-	color: var(--fontColorFooter);
+	color: var(--color-lightLightGrey);
 }
 
 .form__textarea {
@@ -579,11 +583,11 @@ button {
 }
 
 .form__input-name:focus, .form__input-email:focus, .form__textarea:focus {
-	background-color: #666666;
+	background-color: var(--color-Grey);
 }
 
 .form__input-name:active, .form__input-email:active, .form__textarea:active {
-	background-color: #666666;
+	background-color: var(--color-Grey);
 }
 
 /* Buttons */
@@ -594,7 +598,7 @@ button {
 
 .form__btn {
 	padding: 19px 52px;
-	color: var(--fontWhite);
+	color: var(--color-white);
 }
 
 .form__text {
@@ -632,7 +636,7 @@ button {
 	left: 16px;
 	width: 14px;
 	height: 14px;
-	border: 1px solid #CACACA;
+	border: 1px solid var(--color-lightLightGrey);
 	border-radius: 2px;
 	transition: box-shadow 0.2s linear;
 }
@@ -1033,10 +1037,6 @@ button {
 	.faq__list-item-heading {
 		flex: 0 0 570px;
 		line-height: 32px;
-	}
-
-	.faq___list-item-icon {
-		transform: translateY(10px);
 	}
 
 	/* Footer */
