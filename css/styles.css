@@ -9,8 +9,9 @@
 	--fontBlack: #000;
 	--fontColorFooter: #CACACA;
 	--ColorActive: #E1670E;
-	--borderRadBig: 32px;
-	--borderRadSmall: 16px;
+	--borderRad32: 32px;
+	--borderRad24: 24px;
+	--borderRad16: 16px;
 }
 
 body {
@@ -36,7 +37,7 @@ button {
 	display: inline-block;
 	text-align: center;
 	padding: 20px 38px;
-	border-radius: var(--borderRadSmall);
+	border-radius: var(--borderRad16);
 	font-size: 16px;
 	font-weight: 700;
 	background-color: var(--fontOrange);
@@ -99,7 +100,7 @@ button {
 	justify-content: space-between;
 	margin-bottom: 50px;
 	padding: 14px 4% 14px 3.8%;
-	border-radius: 0 0 var(--borderRadBig) var(--borderRadBig);
+	border-radius: 0 0 var(--borderRad32) var(--borderRad32);
 	background: var(--fontWhite);
 	box-shadow: 0 5px 40px rgba(0, 0, 0, 0.1);
 }
@@ -203,7 +204,7 @@ button {
 .hero {
 	margin-bottom: 50px;
 	padding: 100px 0 100px 80px;
-	border-radius: var(--borderRadBig);
+	border-radius: var(--borderRad32);
 	color: var(--fontWhite);
 	background-image: url('../img/balconies-compres-2k-3k.jpg');
 	background-size: cover;
@@ -261,7 +262,7 @@ button {
 
 .about-banner {
 	position: relative;
-	border-radius: var(--borderRadBig);
+	border-radius: var(--borderRad32);
 	background-image: url('../img/about-compres1200-800.jpg');
 	background-size: cover;
 	background-position: center center;
@@ -275,7 +276,7 @@ button {
 	bottom: 0;
 	left: 0;
 	padding: 50px 6% 50px 5.46%;
-	border-radius: var(--borderRadBig);
+	border-radius: var(--borderRad32);
 	color: var(--fontWhite);
 	background: rgba(0, 0, 0, 0.5);
 }
@@ -301,7 +302,7 @@ button {
 	align-items: center;
 	padding: 65px 0 65px 6.9%;
 	border: 1px solid grey;
-	border-radius: var(--borderRadBig);
+	border-radius: var(--borderRad32);
 }
 
 .about-item:not(:last-child) {
@@ -364,7 +365,7 @@ button {
 .how-work__article-banner {
 	flex: 0 0 49.15%;
 	height: 460px;
-	border-radius: var(--borderRadBig);
+	border-radius: var(--borderRad32);
 	background-image: url('../img/how-work-origin1-compres1920.jpg');
 	background-size: cover;
 	background-position: 50% 50%;
@@ -554,7 +555,7 @@ button {
 
 .form__input-name, .form__input-email, .form__textarea {
 	padding: 14px 24px;
-	border-radius: var(--borderRadSmall);
+	border-radius: var(--borderRad16);
 	font-size: 16px;
 	line-height: 32px;
 	color: var(--fontWhite);
@@ -882,6 +883,7 @@ button {
 	}
 
 	.footer__left {
+		flex: auto;
 		margin-right: 0;
 	}
 
@@ -924,4 +926,126 @@ button {
 		display: none;
 	}
 	
+}
+
+@media (max-width: 768px) {
+	
+	/* Header */
+	.header {
+		padding: 11px 52px 10px 50px;
+	}
+
+	/* Hero */
+	.hero {
+		padding: 160px 40px 160px 40px;
+		border-radius: var(--borderRad24);
+	}
+
+	.hero-heading {
+		width: 100%;
+		font-size: 50px;
+		line-height: 61px;
+	}
+
+	.hero-description {
+		width: 100%;
+		font-size: 18px;
+		line-height: 22px;
+	}
+
+	/* About */
+
+	.about {
+		margin-bottom: 79px;
+	}
+
+	.about-text {
+		margin-bottom: 54px;
+	}
+
+	.about-banner {
+		min-height: 650px;
+		border-radius: var(--borderRad24);
+	}
+
+	.about-banner-item {
+		padding: 34px 5.99% 34px 5.99%;
+		border-radius: var(--borderRad24);
+	}
+
+	.about-description-rigth {
+		min-height: auto;
+	}
+
+	.about-banner-text {
+		flex: 0 0 61.41%;
+	}
+
+	.about-item {
+		column-gap: 2.4%;
+		padding: 35px 46px 35px 40px;
+	}
+	
+	.about-item-logo {
+		width: 114px;
+		height: 99px;
+	}
+
+/* How work */
+
+	.how-work {
+		margin-bottom: 49px;
+	}
+
+	.how-work__nav-list {
+		justify-content: space-between;
+	}
+
+	.how-work__article {
+		flex-direction: column-reverse;
+	}
+
+	.how-work__article-banner {
+		flex: auto;
+		min-height: 284px;
+		margin-bottom: 38px;
+		border-radius: var(--borderRad24);
+	}
+
+	.how-work__article-description-text {
+		display: inline;
+	}
+
+	.how-work__btn-wrapper {
+		margin-top: 25px;
+	}
+
+	/* FAQ */
+
+	.faq {
+		margin-bottom: 112px;
+	}
+
+	.faq__heading {
+		margin-bottom: 31px;
+	}
+
+	.faq__list-item-heading {
+		flex: 0 0 570px;
+		line-height: 32px;
+	}
+
+	.faq___list-item-icon {
+		transform: translateY(10px);
+	}
+
+	/* Footer */
+
+	.footer {
+		padding: 50px 50px 50px 49px;
+	}
+	
+	.footer__left-logo {
+		margin-bottom: 14px;
+	}
 }
