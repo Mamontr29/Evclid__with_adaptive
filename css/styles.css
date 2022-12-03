@@ -250,7 +250,10 @@ button {
 .hero__heading, .hero__description, .hero__btn {
 	position: relative;
 	z-index: 2;
-	/* pointer-events: none; */
+}
+
+.hero__heading, .hero__description {
+	pointer-events: none;
 }
 
 .swiper {
