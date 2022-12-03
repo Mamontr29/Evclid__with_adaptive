@@ -210,17 +210,13 @@ button {
 
 /* Hero */
 
-.banner__slider {
-	padding: 100px 80px;
-	border-radius: var(--borderRad32);
-	color: var(--color-white);
-	background-repeat: no-repeat;
-	background-size: cover;
-	background-position: center;
+.banner {
+	position: relative;
 }
 
-.banner__slider--1 {
-	background-image: url('../img/balconies-compres-2k-3k.jpg');
+.banner__slider {
+	padding: 100px 80px;
+	color: var(--color-white);
 }
 
 .hero__heading {
@@ -246,6 +242,42 @@ button {
 	font-size: 23px;
 	line-height: 28px;
 }
+
+.hero__heading, .hero__description, .hero__btn {
+	position: relative;
+	z-index: 2;
+	/* pointer-events: none; */
+}
+
+.swiper {
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.swiper-slide {
+	border-radius: var(--borderRad32);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+}
+
+.slide1 {
+	background-image: url(../img/slide1.jpg);
+}
+
+.slide2 {
+	background-image: url(../img/slide2.jpeg);
+}
+
+.slide3 {
+	background-image: url(../img/slide3.jpeg);
+}
+
 
 /* About */
 
