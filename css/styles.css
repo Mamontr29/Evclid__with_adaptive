@@ -282,6 +282,25 @@ button {
 	background-image: url(../img/slide3.jpeg);
 }
 
+.swiper-pagination-bullet {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: var(--color-lightLightGrey);
+}
+
+.swiper-pagination-bullet-active {
+	background-color: var(--color-white);
+}
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+	margin: 0 10px;
+
+}
+
+.swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+	bottom: 28px;
+}
 
 /* About */
 
