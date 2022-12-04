@@ -424,6 +424,10 @@ button {
 	line-height: 22px;
 }
 
+.tabs-btn {
+	background-color: var(--color-white);
+}
+
 .tabs-content {
 	display: none;
 }
