@@ -519,6 +519,7 @@ button {
 
 .faq__list-item {
 	display: flex;
+	flex-direction: row-reverse;
 	align-items: center;
 	justify-content: space-between;
 	margin-bottom: -1px;
@@ -526,14 +527,10 @@ button {
 	border-bottom: 1px solid var(--color-lightLightGrey);
 	border-top: 1px solid var(--color-lightLightGrey);
 	transition: border-color .3s ease, color .3s ease;
-}
+} 
 
 .faq___list-item-icon {
 	flex-shrink: 0;
-}
-
-.faq___list-item-icon path {
-	transform-origin: 50%;
 }
 
 .faq__list-item:hover {
@@ -544,44 +541,36 @@ button {
 	color: var(--color-orange);
 }
 
-.faq___list-item-icon path, .faq___list-item-icon ellipse {
-	transition: fill .5s ease, transform .5s ease;
-}
-
-.faq__list-item:hover .faq___list-item-icon ellipse {
-	fill: var(--color-orange);
-}
-
-.faq__list-item:hover .faq___list-item-icon path {
-	fill: var(--color-white);
-}
-
-.faq__list-item:focus {
-	position: relative;
-	z-index: 1;
-	border-color: var(--color-orange);
-	color: var(--color-orange);
-}
-
-.faq__list-item:focus .faq___list-item-icon ellipse {
-	fill: var(--color-orange);
-}
-
-.faq__list-item:focus .faq___list-item-icon path {
-	fill: var(--color-white);
-}
-
 .faq__list-item:active {
 	color: var(--color-Black);
 	border-color: var(--color-lightLightGrey);
 }
 
-.faq__list-item:active .faq___list-item-icon path {
-	transform: rotate(45deg);
+/* стилизация аккордиона */
+.ui-accordion-header-icon {
+	width: 50px;
+	height: 50px;
+	background-image: url(../img/+х.svg);
+	background-size: 50px 50px;
+	transition: background-image .3s ease;
+
 }
 
-.faq__list-item:active .faq___list-item-icon ellipse {
-	fill: var(--color-lightLightGrey);
+.ui-accordion-header-active {
+	border-bottom: none;
+	color: var(--color-Black);
+}
+
+.ui-accordion-header-active .ui-accordion-header-icon {
+	background-image: url(../img/+XActive.svg);
+}
+
+.faq__list-item:hover .ui-accordion-header-icon {
+	background-image: url(../img/+XOrange.svg);
+}
+
+.ui-accordion-content {
+	margin-bottom: 40px;
 }
 
 /* Footer */
@@ -1175,6 +1164,12 @@ button {
 		line-height: 32px;
 	}
 
+	.ui-accordion-header-icon {
+		width: 30px;
+		height: 30px;
+		background-size: 30px 30px;
+	}
+
 	/* Footer */
 
 	.footer__container {
@@ -1252,6 +1247,17 @@ button {
 		height: 35px;
 	}
 
+	.header__nav {
+		top: 0;
+		left: -320px;
+		width: 320px;
+	}
+
+	.nav__list {
+		font-size: 16px;
+	}
+
+
 		/* Hero */
 	.main__hero {
 		margin-bottom: 60px;
@@ -1282,8 +1288,13 @@ button {
 		margin-right: auto;
 		padding: 14px 28px;
 		line-height: 15px;
-		
 	}
+
+	.swiper-pagination-bullet {
+		width: 10px;
+		height: 10px;
+	}
+	
 
 		/* About */
 
@@ -1401,6 +1412,7 @@ button {
 		}
 
 		.faq__list-item-heading {
+			flex: 0 1 241px;
 			font-size: 14px;
 			line-height: 24px;
 		}
@@ -1408,6 +1420,13 @@ button {
 		.faq___list-item-icon {
 			width: 30px;
 			height: 30px;
+		}
+
+		.ui-accordion-header-icon {
+			width: 30px;
+			height: 30px;
+			background-size: 30px 30px;
+			overflow: visible;
 		}
 
 		/* Footer */
