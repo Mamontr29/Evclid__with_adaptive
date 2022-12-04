@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"/>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 	<script src="js/menu.js"></script>
+	<script src="js/tabs.js"></script>
 	<link rel="stylesheet" href="css/styles.css">
 	<title>Евклид - проектные системы</title>
 </head>
@@ -170,41 +171,101 @@
 
 				<nav class="how-work__nav">
 					<ul class="how-work__nav-list">
-						<li class="how-work__nav-item">
-							<a class="how-work__nav-link nav-link" href="">1 шаг</a>
+						<li class="how-work__nav-item tabs-item">
+							<button class="how-work__nav-link nav-link tabs-btn" data-path="one">1 шаг</button>
 						</li>
-						<li class="how-work__nav-item">
-							<a class="how-work__nav-link nav-link" href="">2 шаг</a>
+						<li class="how-work__nav-item tabs-item">
+							<button class="how-work__nav-link nav-link tabs-btn" data-path="two">2 шаг</button>
 						</li>
-						<li class="how-work__nav-item">
-							<a class="how-work__nav-link nav-link" href="">3 шаг</a>
+						<li class="how-work__nav-item tabs-item">
+							<button class="how-work__nav-link nav-link tabs-btn" data-path="tree">3 шаг</button>
 						</li>
-						<li class="how-work__nav-item">
-							<a class="how-work__nav-link nav-link" href="">4 шаг</a>
+						<li class="how-work__nav-item tabs-item">
+							<button class="how-work__nav-link nav-link tabs-btn" data-path="four">4 шаг</button>
 						</li>
 					</ul>
 				</nav>
-
-				<div class="how-work__article">
-					<div class="how-work__article-description">
-						<h3 class="how-work__article-description-heading item-heading">
-							Проводим консультацию
-						</h3>
-						<p class="how-work__article-description-text">
-							Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями.
-						</p>
-						<p class="how-work__article-description-text">
-							А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
-						</p>
-						<div class="how-work__btn-wrapper">
-							<button class="how-work__article-btn-more btn">Подробнее</button>
-							<button class="how-work__article-btn-contract btn">Договор</button>
+				<!-- первый таб -->
+				<div class="tabs-content tabs-content-active" data-target="one">
+					<div class="how-work__article">
+						<div class="how-work__article-description">
+							<h3 class="how-work__article-description-heading item-heading">
+								Проводим консультацию
+							</h3>
+							<p class="how-work__article-description-text">
+								Влечёт за собой процесс внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями.
+							</p>
+							<p class="how-work__article-description-text">
+								А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований. Кстати, стремящиеся вытеснить традиционное производство, нанотехнологии освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, призваны к ответу.
+							</p>
+							<div class="how-work__btn-wrapper">
+								<button class="how-work__article-btn-more btn">Подробнее</button>
+								<button class="how-work__article-btn-contract btn">Договор</button>
+							</div>
 						</div>
+						<div class="how-work__article-banner banner1"></div>
 					</div>
-					<div class="how-work__article-banner"></div>
 				</div>
+				<!-- второй таб -->
+				<div class="tabs-content" data-target="two">
+					<div class="how-work__article">
+						<div class="how-work__article-description">
+							<h3 class="how-work__article-description-heading item-heading">
+								Составляем смету
+							</h3>
+							<p class="how-work__article-description-text">
+								Внедрения и модернизации приоритизации разума над эмоциями. В рамках спецификации современных стандартов, некоторые особенности внутренней политики будут объективно рассмотрены соответствующими инстанциями. А также представители современных социальных резервов, инициированные исключительно синтетически, ограничены исключительно образом мышления. Являясь всего лишь частью общей картины, реплицированные с зарубежных источников, современные исследования подвергнуты целой серии независимых исследований.
+							</p>
+							<div class="how-work__btn-wrapper">
+								<button class="how-work__article-btn-more btn">Подробнее</button>
+								<button class="how-work__article-btn-contract btn">Договор</button>
+							</div>
+						</div>
+						<div class="how-work__article-banner banner2"></div>
+					</div>
+				</div>
+				<!-- третьий таб -->
+				<div class="tabs-content" data-target="tree">
+					<div class="how-work__article">
+						<div class="how-work__article-description">
+							<h3 class="how-work__article-description-heading item-heading">
+								Привлекаем подрядчиков
+							</h3>
+							<p class="how-work__article-description-text">
+								Идейные соображения высшего порядка, а также новая модель организационной деятельности требует анализа прогресса профессионального сообщества. Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет выполнить важные задания по разработке прогресса профессионального сообщества.
+							</p>
+							<div class="how-work__btn-wrapper">
+								<button class="how-work__article-btn-more btn">Подробнее</button>
+								<button class="how-work__article-btn-contract btn">Договор</button>
+							</div>
+						</div>
+						<div class="how-work__article-banner banner3"></div>
+					</div>
+				</div>
+				<!-- Четвертый таб -->
+				<div class="tabs-content" data-target="four">
+					<div class="how-work__article">
+						<div class="how-work__article-description">
+							<h3 class="how-work__article-description-heading item-heading">
+								Инспектируем все этапы работ
+							</h3>
+							<p class="how-work__article-description-text">
+								Высокий уровень вовлечения представителей целевой аудитории является чётким доказательством простого факта: высококачественный прототип будущего проекта напрямую зависит от дальнейших направлений развития. Разнообразный и богатый опыт говорит нам, что новая модель организационной деятельности говорит о возможностях системы массового участия. Принимая во внимание показатели успешности, постоянное информационно-пропагандистское обеспечение нашей деятельности позволяет.
+							</p>
+							<div class="how-work__btn-wrapper">
+								<button class="how-work__article-btn-more btn">Подробнее</button>
+								<button class="how-work__article-btn-contract btn">Договор</button>
+							</div>
+						</div>
+						<div class="how-work__article-banner banner4"></div>
+					</div>
+				</div>
+
 			</div>
+
+			
 		</section>
+
 
 		<section class="faq main__faq">
 			<div class="container faq__container">
